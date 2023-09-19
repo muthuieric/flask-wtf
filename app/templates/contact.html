@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - My Flask App{% endblock %}
+
+{% block content %}
+    <h1>Contact Us</h1> 
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.name.label }}
+            {{ form.name(size=30) }}
+        </p>
+        <p>
+            {{ form.message.label }}
+            {{ form.message(size=30) }}
+        </p>
+        <p>
+            {{ form.submit() }}
+        </p>
+    </form>
+    
+    {% endblock %}
